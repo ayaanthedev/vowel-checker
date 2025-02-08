@@ -4,15 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vowels Checker</title>
-    <!-- filepath: /E:/Projects/Vowel/index.html -->
-<link href="tailwind.css" rel="stylesheet">
+    <meta name="description" content="Check if a given English alphabet is a vowel or not.">
+    <meta name="keywords" content="vowel checker, English alphabet, vowel or consonant">
+    <meta property="og:image" content="https://ayaansucksatcoding.github.io/vowel-checker/banner.svg/">
+    <link href="tailwind.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #f5f5f5;
+        }
+        header h1 {
+            animation: fadeInDown 1s ease-in-out;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        button {
+            transition: transform 0.3s ease-in-out;
+        }
+        button:hover {
+            transform: scale(1.05);
+            background-color: #333;
+        }
+    </style>
 </head>
-<body class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-    <input type="text" id="input" placeholder="Enter an English alphabet" class="border p-2 m-2">
-    <button onclick="checkVowel()" class="bg-blue-500 text-white p-2 rounded">Check</button>
-    <h1 id="result" class="text-2xl m-2"></h1>
-    <div id="error" class="text-red-500 m-2"></div>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-900">
+    <header>
+
+        <h1 class="text-4xl font-bold m-4 text-gray-100">Vowel Checker</h1>
+    </header>
+    <main class="bg-gray-800 p-6 rounded-lg shadow-lg">
+        <input type="text" id="input" placeholder="Enter an English alphabet" class="border p-2 m-2 rounded w-full bg-gray-700 text-white">
+        <button onclick="checkVowel()" class="bg-gray-700 text-white p-2 rounded w-full mt-2 hover:bg-gray-600 transition duration-300">Check</button>
+        <h2 id="result" class="text-2xl m-2 text-green-500"></h2>
+        <div id="error" class="text-red-500 m-2"></div>
+    </main>
     <script src="app.js"></script>
 </body>
 </html>
