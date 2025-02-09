@@ -4,20 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vowels Checker</title>
-    <meta
-      name="description"
-      content="Check if a given English alphabet is a vowel or not." />
-    <meta
-      name="keywords"
-      content="vowel checker, English alphabet, vowel or consonant" />
-    <meta property="og:image" content="banner.svg" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet" />
-    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
-    <meta
-      name="google-site-verification"
-      content="eTmGzsR7fNAGYX3jhruyTcd1koVSqF4XMM1WE4aJE3Q" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <!-- Title and Primary Meta Tags -->
+        <title>English Vowel Checker - Free Online Tool</title>
+        <meta name="description" content="Free online English vowel checker tool. Instantly check if a letter is a vowel or consonant. Simple, fast, and easy to use for students and teachers." />
+        <meta name="keywords" content="vowel checker, vowel detector, English vowels, vowel or consonant checker, alphabet checker, English alphabet, vowel identifier, online vowel tool" />
+        <meta name="author" content="Your Name" />
+        <meta name="robots" content="index, follow" />
+        
+        <!-- Google Verification -->
+        <meta name="google-site-verification" content="eTmGzsR7fNAGYX3jhruyTcd1koVSqF4XMM1WE4aJE3Q" />
+        
+        <!-- Open Graph / Facebook Meta Tags -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ayaansucksatcoding.github.io/vowel-checker/" />
+        <meta property="og:title" content="English Vowel Checker - Free Online Tool" />
+        <meta property="og:description" content="Free online English vowel checker tool. Instantly check if a letter is a vowel or consonant." />
+        <meta property="og:image" content="banner.svg" />
+        
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="English Vowel Checker - Free Online Tool" />
+        <meta name="twitter:description" content="Free online English vowel checker tool. Instantly check if a letter is a vowel or consonant." />
+        
+        <!-- Stylesheets -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+    </head>
     <style>
       /* Previous styles remain the same */
       body {
@@ -236,186 +254,6 @@
       </div>
     </div>
 
-    <script>
-      // Multilingual background words
-      const foreignWords = {
-        Chinese: ['你好', '世界', '爱', '和平', '快乐'],
-        Spanish: ['hola', 'amor', 'vida', 'feliz', 'mundo'],
-        Hindi: ['नमस्ते', 'प्यार', 'जीवन', 'खुशी', 'दुनिया'],
-        Arabic: ['مرحبا', 'حب', 'سلام', 'سعادة', 'عالم'],
-        Portuguese: ['olá', 'amor', 'vida', 'feliz', 'mundo'],
-        Bengali: ['হ্যালো', 'ভালবাসা', 'জীবন', 'সুখ', 'বিশ্ব'],
-        Japanese: ['こんにちは', '愛', '人生', '幸せ', '世界'],
-        Russian: ['привет', 'любовь', 'жизнь', 'счастье', 'мир'],
-        French: ['bonjour', 'amour', 'vie', 'bonheur', 'monde'],
-        German: ['hallo', 'liebe', 'leben', 'glück', 'welt'],
-        Italian: ['ciao', 'amore', 'vita', 'felice', 'mondo'],
-        Dutch: ['hallo', 'liefde', 'leven', 'geluk', 'wereld'],
-        Turkish: ['merhaba', 'aşk', 'hayat', 'mutluluk', 'dünya'],
-        Korean: ['안녕하세요', '사랑', '인생', '행복', '세계'],
-        Greek: ['γεια', 'αγάπη', 'ζωή', 'ευτυχία', 'κόσμος'],
-        Hebrew: ['שלום', 'אהבה', 'חיים', 'אושר', 'עולם'],
-        Thai: ['สวัสดี', 'รัก', 'ชีวิต', 'ความสุข', 'โลก'],
-        Swahili: ['habari', 'upendo', 'maisha', 'furaha', 'dunia'],
-        Finnish: ['hei', 'rakkaus', 'elämä', 'onni', 'maailma'],
-        Hungarian: ['helló', 'szerelem', 'élet', 'boldogság', 'világ'],
-        Polish: ['cześć', 'miłość', 'życie', 'szczęście', 'świat'],
-        Czech: ['ahoj', 'láska', 'život', 'štěstí', 'svět'],
-        Romanian: ['salut', 'dragoste', 'viață', 'fericire', 'lume'],
-        Vietnamese: [
-          'xin chào',
-          'tình yêu',
-          'cuộc sống',
-          'hạnh phúc',
-          'thế giới',
-        ],
-        Filipino: ['kumusta', 'pag-ibig', 'buhay', 'kaligayahan', 'mundo'],
-        Indonesian: ['halo', 'cinta', 'hidup', 'bahagia', 'dunia'],
-        Malay: ['hello', 'cinta', 'hidup', 'bahagia', 'dunia'],
-        Serbian: ['zdravo', 'ljubav', 'život', 'sreća', 'svet'],
-        Croatian: ['bok', 'ljubav', 'život', 'sreća', 'svijet'],
-        Slovak: ['ahoj', 'láska', 'život', 'šťastie', 'svet'],
-        Danish: ['hej', 'kærlighed', 'liv', 'lykke', 'verden'],
-        Swedish: ['hej', 'kärlek', 'liv', 'lycka', 'värld'],
-        Norwegian: ['hei', 'kjærlighet', 'liv', 'lykke', 'verden'],
-        Estonian: ['tere', 'armastus', 'elu', 'õnn', 'maailm'],
-        Latvian: ['sveiki', 'mīlestība', 'dzīve', 'laime', 'pasaule'],
-        Lithuanian: ['labas', 'meilė', 'gyvenimas', 'laimė', 'pasaulis'],
-        Ukrainian: ['привіт', 'любов', 'життя', 'щастя', 'світ'],
-        Belarusian: ['прывітанне', 'каханне', 'жыццё', 'шчасце', 'свет'],
-        Persian: ['سلام', 'عشق', 'زندگی', 'خوشبختی', 'جهان'],
-        Georgian: [
-          'გამარჯობა',
-          'სიყვარული',
-          'ცხოვრება',
-          'ბედნიერება',
-          'სამყარო',
-        ],
-        Armenian: ['բարեւ', 'սեր', 'կյանք', 'երջանկություն', 'աշխարհ'],
-        Burmese: [
-          'မင်္ဂလာပါ',
-          'ချစ်ခြင်းမေတ္တာ',
-          'အသက်တာ',
-          'ပျော်ရွှင်မှု',
-          'ကမ္ဘာ',
-        ],
-        Mongolian: ['сайн байна уу', 'хайр', 'амьдрал', 'аз жаргал', 'дэлхий'],
-        Sinhala: ['ආයුබෝවන්', 'ආදරය', 'ජීවිතය', 'සන්සුන්', 'ලෝකය'],
-        Tamil: ['வணக்கம்', 'காதல்', 'வாழ்க்கை', 'மகிழ்ச்சி', 'உலகம்'],
-      };
-      function createFloatingLetters() {
-        const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        const background = document.getElementById('letterBackground');
-        const columns = 20;
-        const activeElements = new Set();
-        let columnWidth = window.innerWidth / columns;
-        const usedPositions = new Set();
-
-        function getRandomColumn() {
-          let column;
-          do {
-            column = Math.floor(Math.random() * columns);
-          } while (usedPositions.has(column));
-          return column;
-        }
-
-        function createFloatingElement(isWord = false) {
-          if (activeElements.size >= columns) return;
-
-          const column = getRandomColumn();
-          usedPositions.add(column);
-
-          const element = document.createElement('span');
-
-          if (isWord) {
-            const language =
-              Object.keys(foreignWords)[
-                Math.floor(Math.random() * Object.keys(foreignWords).length)
-              ];
-            const words = foreignWords[language];
-            element.textContent =
-              words[Math.floor(Math.random() * words.length)];
-            element.className = 'letter foreign-word';
-          } else {
-            element.textContent =
-              letters[Math.floor(Math.random() * letters.length)];
-            element.className = 'letter';
-          }
-
-          const xPos =
-            column * columnWidth + Math.random() * (columnWidth * 0.5);
-          element.style.left = `${xPos}px`;
-
-          const duration = 10 + Math.random() * 10;
-          element.style.animationDuration = `${duration}s`;
-
-          background.appendChild(element);
-          activeElements.add(element);
-
-          element.addEventListener('animationend', () => {
-            if (background.contains(element)) {
-              background.removeChild(element);
-              activeElements.delete(element);
-              usedPositions.delete(column);
-            }
-          });
-        }
-
-        // Create initial elements
-        for (let i = 0; i < columns / 2; i++) {
-          createFloatingElement(Math.random() > 0.7); // 30% chance of being a word
-        }
-
-        setInterval(() => {
-          if (activeElements.size < columns) {
-            createFloatingElement(Math.random() > 0.7);
-          }
-        }, 1000);
-
-        window.addEventListener('resize', () => {
-          activeElements.forEach((element) => element.remove());
-          activeElements.clear();
-          usedPositions.clear();
-          columnWidth = window.innerWidth / columns;
-        });
-      }
-
-      // Initialize background
-      createFloatingLetters();
-
-      // Vowel checking function
-      function checkVowel() {
-        const input = document.getElementById('input').value.toLowerCase();
-        const result = document.getElementById('result');
-        const error = document.getElementById('error');
-
-        error.textContent = '';
-        result.textContent = '';
-
-        if (!input) {
-          error.textContent = 'Please enter a letter';
-          return;
-        }
-
-        if (!/^[a-zA-Z]$/.test(input)) {
-          error.textContent = 'Please enter a valid English letter';
-          return;
-        }
-
-        const vowels = ['a', 'e', 'i', 'o', 'u'];
-        if (vowels.includes(input)) {
-          result.textContent = `'${input}' is a vowel`;
-        } else {
-          result.textContent = `'${input}' is a consonant`;
-        }
-      }
-
-      // Add keyboard support
-      document.getElementById('input').addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-          checkVowel();
-        }
-      });
-    </script>
+  <script src="main.min.js"></script>
   </body>
 </html>
