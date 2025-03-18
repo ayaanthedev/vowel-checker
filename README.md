@@ -12,7 +12,7 @@ This Project is created for students to find vowels out of letters.
 
 ## Used By
 
-This project is used by the following companies:
+This project is used by the following people:
 
 - Students
 - Teachers
