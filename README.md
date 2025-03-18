@@ -1,35 +1,33 @@
-# Vowel Checker
 
-A simple web-based JavaScript program that checks if a given alphabet is a vowel.
+# Vowel-Checker
 
-## Features
-- Checks if a single alphabet is a vowel (`a, e, i, o, u`)
-- Case-insensitive detection
-- Works only on web browsers
+This Project is created for students to find vowels out of letters.
 
-## Installation
-Clone the repository:
-```sh
-git clone https://github.com/your-username/vowel-checker.git
-cd vowel-checker
-```
 
-## Usage
-Open `index.html` in your web browser.
-Enter a single alphabet, and the program will determine if it is a vowel.
+<img src="https://raw.githubusercontent.com/ayaanthedev/vowel-checker/refs/heads/main/favicon.svg" width="49" height="50">
 
-## Example
-**Input:**
-```
-A
-```
-**Output:**
-```
-It is a vowel.
-```
 
-## Contributing
-Feel free to fork this repository and submit pull requests.
+
+
+
+## Used By
+
+This project is used by the following companies:
+
+- Students
+- Teachers
+
+## Screenshots
+
+![App Screenshot](https://raw.githubusercontent.com/ayaanthedev/vowel-checker/main/docs/assets/images/screenshot1.png)
+
+
+![App Screenshot](https://raw.githubusercontent.com/ayaanthedev/vowel-checker/main/docs/assets/images/screenshot2.png)
+
+![App Screenshot](https://raw.githubusercontent.com/ayaanthedev/vowel-checker/main/docs/assets/images/screenshot3.png)
+
 
 ## License
-This project is licensed under the MIT License.
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
